@@ -1,0 +1,40 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exomodel-page (this repo)
+        uses: actions/checkout@v4
+        with:
+          path: exomodel-page
+
+      - name: Checkout exomodel (library repo for docstrings)
+        uses: actions/checkout@v4
+        with:
+          repository: exomodel-ai/exomodel
+          path: exomodel
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r exomodel-page/requirements.txt
+
+      - name: Deploy to GitHub Pages
+        run: |
+          cd exomodel-page
+          mkdocs gh-deploy --force
