@@ -42,11 +42,13 @@ While traditional agent frameworks focus on chat, ExoModel focuses on the **Busi
 ## 🚀 Quick Start
 
 ### 1. Setup your Environment
-Install the package and configure your API keys in a `.env` file at the root of your project.
+Install the package. 
 
 ```bash
 pip install exomodel
-````
+```
+
+Configure your API keys in a `.env` file at the root of your project.
 
 ```text
 # .env
