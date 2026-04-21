@@ -41,32 +41,56 @@ While traditional agent frameworks focus on chat, ExoModel focuses on the **Busi
 
 ## 🚀 Quick Start
 
-Get it running in your environment:
+### 1. Setup your Environment
+Install the package and configure your API keys in a `.env` file at the root of your project.
 
 ```bash
 pip install exomodel
+````
+
+```text
+# .env
+GOOGLE_API_KEY=your_key_here
+MY_LLM_MODEL=gemini-1.5-flash
+MY_EMBEDDING_MODEL=text-embedding-004
 ```
 
-Define your first **Agentic Entity**:
+### 2\. Create a Knowledge Base
 
-```python hl_lines="4 11 14"
+Create a file named `proposal_rules.md`. This "grounds" your AI objects in real-world logic.
+
+```markdown
+# Proposal Rules
+- We only accept projects above $10,000.
+- Every proposal must include a 10% safety margin in the pricing.
+- We do not work with companies in the tobacco industry.
+```
+
+### 3\. Define and Run your Entity
+
+Inherit from `ExoModel` to give your data structures autonomous reasoning powers.
+
+```python hl_lines="3 8 11"
 from exomodel import ExoModel
-from pydantic import Field
 
 class Proposal(ExoModel):
-    client: str = Field(description="Company legal name")
-    value: int = Field(description="Project budget")
+    client: str = ""
+    budget: float = 0.0
     
     @classmethod
     def get_rag_sources(cls):
         # The object now 'knows' your specific business rules
-        return ["docs/pricing_guidelines.pdf"]
+        return ["proposal_rules.md"]
 
-# Initialize an object from unstructured text
+# Initialize and populate the object from raw text
 p = Proposal(prompt="Draft a 50k proposal for Tesla")
 
-# The object analyzes itself based on the RAG rules
+# print the object
+print(p.to_ui())
+
+# The object analyzes itself based on the 'proposal_rules.md'
 print(p.run_analysis()) 
+
 ```
 
 -----
@@ -111,3 +135,6 @@ We welcome contributions\! ExoModel is built by developers for developers.
 ## 📄 License
 
 Distributed under the Apache License 2.0. See `LICENSE` for more information.
+
+
+

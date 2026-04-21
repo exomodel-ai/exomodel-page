@@ -10,7 +10,7 @@ pip install exomodel
 
 ## ⚙️ Configuration
 
-ExoModel requires connection to an LLM provider and an embedding model. Ensure you have the following environment variables configured:
+ExoModel requires connection to an LLM provider and an embedding model. Ensure you have the following environment variables configured in the .env file:
 
 ### LLM API Keys
 - `GOOGLE_API_KEY`: If using Google Gemini models.
@@ -33,14 +33,12 @@ To verify your installation, try creating a simple model:
 
 ```python
 from exomodel import ExoModel
-from pydantic import Field
 
 class Agent(ExoModel):
-    name: str
-    specialty: str
+    name: str = ""
+    specialty: str = ""
 
 # Initialize with a prompt
 agent = Agent(prompt="Create a specialized AI agent for coding assistance.")
-print(agent.name)
-print(agent.specialty)
+print(agent.to_ui())
 ```

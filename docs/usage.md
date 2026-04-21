@@ -2,15 +2,14 @@
 
 ## 🏗 Defining ExoModels
 
-Inherit from `ExoModel` to give your data structures "AI powers." Use Pydantic's `Field` to provide descriptions that the LLM will use to understand the context of each field.
+Inherit from `ExoModel` to give your data structures "AI powers." 
 
 ```python
 from exomodel import ExoModel
-from pydantic import Field
 
 class Project(ExoModel):
-    title: str = Field(description="The name of the project")
-    budget: float = Field(description="Estimated cost in USD")
+    title: str = ""
+    budget: float = 0.0
 ```
 
 ## 🧠 AI Interactions
@@ -19,7 +18,7 @@ class Project(ExoModel):
 You can instantiate a model directly from a natural language description.
 
 ```python
-project = Project(prompt="A web application for a futuristic pet store using React and Python.")
+project = Project(prompt="The project is about a new AI-powered platform for a pet shop and will cost 50K")
 ```
 
 ### Self-Analysis with RAG
@@ -41,7 +40,7 @@ analysis = doc.run_analysis()
 Update specific fields using natural language.
 
 ```python
-project.update_field("budget", "Increase the budget by 20% due to scope expansion.")
+project.update_field("budget", "Increase the budget to 70K due to scope expansion.")
 ```
 
 ## 📋 Managing Collections
