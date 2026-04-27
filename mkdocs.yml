@@ -36,6 +36,11 @@ theme:
     - content.code.copy
     - content.code.annotate
 
+extra:
+  analytics:
+    provider: google
+    property: G-YH6DNQ1KSZ
+
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
