@@ -1,13 +1,12 @@
 # 🌌 ExoModel AI
 ### The Object-Oriented Framework for Agentic AI
 
+[![GitHub Link](https://img.shields.io/badge/GitHub-Link-blue)](https://github.com/exomodel-ai/exomodel)
 [![PyPI version](https://img.shields.io/pypi/v/exomodel?color=blue)](https://pypi.org/project/exomodel/)
 [![License](https://img.shields.io/github/license/exomodel-ai/exomodel)](https://github.com/exomodel-ai/exomodel/blob/main/LICENSE)
 
 
 **ExoModel** is more than an LLM wrapper—it's a paradigm shift in AI-native development. By extending LangChain and Pydantic, it transforms static data structures into "living" entities that can think, reason, and update themselves using autonomous RAG.
-
-
 
 ---
 
