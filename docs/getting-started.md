@@ -42,3 +42,9 @@ class Agent(ExoModel):
 agent = Agent(prompt="Create a specialized AI agent for coding assistance.")
 print(agent.to_ui())
 ```
+
+If the model populates with a name and specialty, your environment is set up correctly.
+
+---
+
+**Next:** Learn how to attach documents, run self-analysis, and manage collections in [Core Usage](usage.md).

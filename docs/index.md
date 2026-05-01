@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/exomodel-ai/exomodel)](https://github.com/exomodel-ai/exomodel/blob/main/LICENSE)
 
 
-**ExoModel** is more than an LLM wrapper—it's a paradigm shift in AI-native development. By extending LangChain and Pydantic, it transforms static data structures into "living" entities that can think, reason, and update themselves using autonomous RAG.
+**ExoModel** brings AI capabilities directly into your data models. Instead of building prompt pipelines around your objects, your objects become the agents — they populate themselves from natural language, consult their own documents via RAG, and validate their state against business rules. Built on top of LangChain and Pydantic.
 
 ---
 
@@ -16,10 +16,10 @@ While traditional agent frameworks focus on chat, ExoModel focuses on the **Busi
 
 | Traditional AI Apps | With ExoModel |
 | :--- | :--- |
-| Passive data models | Models with "Contextual Consciousness" |
-| Fragile manual prompting | Type-safe "Object-to-Prompt" interface |
-| Disconnected RAG pipelines | Knowledge injected directly into the class |
-| Complex JSON parsing | Guaranteed schema-validated outputs |
+| Passive data models | Models that populate and update themselves from natural language |
+| Fragile manual prompting | Type-safe field mapping — the schema is the prompt |
+| Disconnected RAG pipelines | Documents attached directly to the class, consulted at runtime |
+| Complex JSON parsing | Guaranteed schema-validated outputs via Pydantic |
 
 ---
 
@@ -34,6 +34,8 @@ While traditional agent frameworks focus on chat, ExoModel focuses on the **Busi
     A centralized brain that manages tool routing and persona switching to optimize LLM accuracy and cost.
 -   ### 🔌 API-First Design
     Transform messy human input into the strict JSON schemas required by your existing legacy APIs and services.
+-   ### ⚙️ Agentic Tools with `@llm_function`
+    Decorate any method on an `ExoModel` or `ExoModelList` class with `@llm_function` to expose it as an agentic tool. The agent discovers and calls it autonomously — no manual tool registration required.
 </div>
 
 ---
@@ -52,8 +54,8 @@ Configure your API keys in a `.env` file at the root of your project.
 ```text
 # .env
 GOOGLE_API_KEY=your_key_here
-MY_LLM_MODEL=gemini-1.5-flash
-MY_EMBEDDING_MODEL=text-embedding-004
+MY_LLM_MODEL=gemini-2.5-flash
+MY_EMBEDDING_MODEL=gemini-embedding-001
 ```
 
 ### 2\. Create a Knowledge Base
@@ -100,13 +102,16 @@ print(p.run_analysis())
 
 ExoModel is built to be modular, scalable, and provider-agnostic.
 
-  - **ExoModel:** The intelligent data foundation (Pydantic + AI).
-  - **ExoAgent:** The reasoning orchestrator (Generalist, Specialist, or Hybrid).
+  - **ExoModel:** The intelligent data foundation — schema-driven, AI-powered, RAG-aware.
+  - **ExoAgent:** The reasoning orchestrator that routes tool calls and manages LLM context.
   - **ExoModelList:** Bulk management and agentic collection processing (CSV/UI exports).
+  - **`@llm_function`:** A decorator that turns any method into an agentic tool, discoverable and callable by `ExoAgent` at runtime.
 
 -----
 
 ## 🎯 Use Cases
+
+These are examples of how ExoModel maps to real-world problems across different domains.
 
   * ### 🤝 Consultative Apps
     Build AI advisors that guide users through complex processes (like insurance claims or financial planning) by populating structured models in real-time during the consultation.
@@ -115,7 +120,7 @@ ExoModel is built to be modular, scalable, and provider-agnostic.
   * ### 📊 Sales & CRM Automation
     Deploy agents that draft professional proposals, calculate pricing based on business rules, and update lead status autonomously.
   * ### 🕵️♂️ Smart Auditing & Compliance
-    Create objects that "read" their own source contracts to populate audit fields and flag inconsistencies without manual oversight.
+    Create objects that read their own source contracts to populate audit fields and flag inconsistencies without manual oversight.
   * ### 📈 Intelligent Dashboarding
     Instantly transform raw logs or transcripts into lists of structured objects (`ExoModelList`), ready for data visualization.
 
