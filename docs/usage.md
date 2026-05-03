@@ -14,12 +14,15 @@ class Project(ExoModel):
 
 ## 🧠 AI Interactions
 
-### Initialization by Prompt
-You can instantiate a model directly from a natural language description.
+### Creating from a Prompt
+Use the `create` classmethod to instantiate and populate a model from a natural-language description:
 
 ```python
-project = Project(prompt="The project is about a new AI-powered platform for a pet shop and will cost 50K")
+project = Project.create("An AI-powered platform for a pet shop, budget 50K")
 ```
+
+!!! note
+    Passing `prompt=` to the constructor (`Project(prompt=...)`) still works but emits a `DeprecationWarning` and will be removed in the next major version. Prefer `create()`.
 
 ### Self-Analysis with RAG
 ExoModels can analyze themselves against specific business rules provided via RAG.
@@ -80,8 +83,8 @@ from exomodel import ExoModel, ExoModelList
 projects = ExoModelList(item_class=Project)
 projects.create_list("Generate 5 innovative AI startup ideas.")
 
-# Export to CSV
-projects.to_csv("startups.csv")
+# Export to CSV (returns a string)
+csv_output = projects.to_csv()
 
 # UI Representation
 print(projects.to_ui())

@@ -43,19 +43,22 @@ While traditional agent frameworks focus on chat, ExoModel focuses on the **Busi
 ## 🚀 Quick Start
 
 ### 1. Setup your Environment
-Install the package. 
+ExoModel is LLM-agnostic. Install only the provider package you need:
 
 ```bash
-pip install exomodel
+pip install exomodel[google]      # Gemini (default)
+pip install exomodel[anthropic]   # Claude
+pip install exomodel[openai]      # OpenAI / Azure OpenAI
+pip install exomodel[cohere]      # Cohere
+pip install exomodel[all]         # all providers
 ```
 
-Configure your API keys in a `.env` file at the root of your project.
+Then set your model and API key in a `.env` file at the root of your project.
 
-```text
-# .env
-GOOGLE_API_KEY=your_key_here
-MY_LLM_MODEL=gemini-2.5-flash
-MY_EMBEDDING_MODEL=gemini-embedding-001
+```env
+MY_LLM_MODEL=google_genai:gemini-2.5-flash-lite
+MY_EMB_MODEL=google_genai:gemini-embedding-001   # optional — auto-detected from provider
+GOOGLE_API_KEY=your-key-here
 ```
 
 ### 2\. Create a Knowledge Base
@@ -85,8 +88,8 @@ class Proposal(ExoModel):
         # The object now 'knows' your specific business rules
         return ["proposal_rules.md"]
 
-# Initialize and populate the object from raw text
-p = Proposal(prompt="Draft a 50k proposal for Tesla")
+# Create and populate the object from raw text
+p = Proposal.create("Draft a 50k proposal for Tesla")
 
 # print the object
 print(p.to_ui())
