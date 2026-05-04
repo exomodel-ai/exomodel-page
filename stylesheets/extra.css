@@ -1,0 +1,83 @@
+/* Primary — Exo Orange */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #f97316;
+  --md-primary-fg-color--light: #fb923c;
+  --md-primary-fg-color--dark: #c2530a;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+/* Accent — Exo Orange */
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #f97316;
+  --md-accent-fg-color--transparent: rgba(249, 115, 22, 0.1);
+  --md-accent-bg-color: #ffffff;
+}
+
+/* Dark mode — Exo Void background */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0a0a0f;
+  --md-default-bg-color--light: #141418;
+  --md-default-bg-color--lighter: #1a1a20;
+  --md-default-bg-color--lightest: #1f1f27;
+  --md-default-fg-color: #f5f5f5;
+  --md-default-fg-color--light: #e5e5e5;
+  --md-default-fg-color--lighter: #737373;
+  --md-default-fg-color--lightest: #404040;
+  --md-code-bg-color: #0f0f14;
+  --md-code-fg-color: #f97316;
+  --md-footer-bg-color: #050508;
+  --md-footer-bg-color--dark: #030305;
+  --md-typeset-table-color: rgba(249, 115, 22, 0.05);
+}
+
+/* Dark mode — void header with orange accent line */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #0a0a0f;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #0f0f14;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+/* Light mode — gray-100 surfaces for code */
+[data-md-color-scheme="default"] {
+  --md-code-bg-color: #f5f5f5;
+  --md-code-fg-color: #262626;
+}
+
+/* Typography — letter-spacing per brand guidelines */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.033em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  letter-spacing: -0.019em;
+}
+
+/* Inline code — DM Mono orange on dark, neutral on light */
+[data-md-color-scheme="slate"] .md-typeset code:not(.highlight code) {
+  color: #f97316;
+  background-color: #0f0f14;
+  border: 1px solid #1f1f1f;
+}
+
+/* Admonition accent */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: #f97316;
+}
+
+/* Highlight — orange selection */
+::selection {
+  background-color: rgba(249, 115, 22, 0.25);
+}

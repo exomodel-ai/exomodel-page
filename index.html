@@ -1,0 +1,1272 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Object-Oriented Agentic AI Framework">
+      
+      
+        <meta name="author" content="ExoModel Team">
+      
+      
+        <link rel="canonical" href="https://exomodel.ai/">
+      
+      
+      
+        <link rel="next" href="getting-started/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>ExoModel AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne:300,300i,400,400i,700,700i%7CDM+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Syne";--md-code-font:"DM Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-YH6DNQ1KSZ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-YH6DNQ1KSZ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-YH6DNQ1KSZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exomodel-ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="ExoModel AI" class="md-header__button md-logo" aria-label="ExoModel AI" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ExoModel AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/exomodel-ai/exomodel" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    exomodel-ai/exomodel
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="usage/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Core Usage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reference Guide
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="ExoModel AI" class="md-nav__button md-logo" aria-label="ExoModel AI" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    ExoModel AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/exomodel-ai/exomodel" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    exomodel-ai/exomodel
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-object-oriented-framework-for-agentic-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Object-Oriented Framework for Agentic AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-exomodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Why ExoModel?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-power-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 Core Power-Ups
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔥 Core Power-Ups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Smart CRUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-rag-grounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Native RAG Grounding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exoagent-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 ExoAgent Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-first-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 API-First Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentic-tools-with-llm_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ Agentic Tools with @llm_function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-your-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Setup your Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-define-and-run-your-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Define and Run your Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠 Framework Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultative-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Consultative Apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seamless-api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 Seamless API Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-crm-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Sales &amp; CRM Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-auditing-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️♂️ Smart Auditing &amp; Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intelligent-dashboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Intelligent Dashboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-object-oriented-framework-for-agentic-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Object-Oriented Framework for Agentic AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-exomodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Why ExoModel?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-power-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 Core Power-Ups
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔥 Core Power-Ups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Smart CRUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-rag-grounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Native RAG Grounding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exoagent-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 ExoAgent Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-first-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 API-First Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agentic-tools-with-llm_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ Agentic Tools with @llm_function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-your-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Setup your Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-define-and-run-your-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Define and Run your Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠 Framework Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultative-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Consultative Apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seamless-api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 Seamless API Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-crm-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Sales &amp; CRM Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-auditing-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️♂️ Smart Auditing &amp; Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intelligent-dashboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Intelligent Dashboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="exomodel-ai">🌌 ExoModel AI</h1>
+<h3 id="the-object-oriented-framework-for-agentic-ai">The Object-Oriented Framework for Agentic AI</h3>
+<p><a href="https://github.com/exomodel-ai/exomodel"><img alt="GitHub Link" src="https://img.shields.io/badge/GitHub-Link-blue" /></a>
+<a href="https://pypi.org/project/exomodel/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/exomodel?color=blue" /></a>
+<a href="https://github.com/exomodel-ai/exomodel/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/exomodel-ai/exomodel" /></a></p>
+<p><strong>ExoModel</strong> brings AI capabilities directly into your data models. Instead of building prompt pipelines around your objects, your objects become the agents — they populate themselves from natural language, consult their own documents via RAG, and validate their state against business rules. Built on top of LangChain and Pydantic.</p>
+<hr />
+<h2 id="why-exomodel">⚡ Why ExoModel?</h2>
+<p>While traditional agent frameworks focus on chat, ExoModel focuses on the <strong>Business Entity</strong>. It brings type safety and structure to the chaotic world of LLMs.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Traditional AI Apps</th>
+<th style="text-align: left;">With ExoModel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Passive data models</td>
+<td style="text-align: left;">Models that populate and update themselves from natural language</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fragile manual prompting</td>
+<td style="text-align: left;">Type-safe field mapping — the schema is the prompt</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disconnected RAG pipelines</td>
+<td style="text-align: left;">Documents attached directly to the class, consulted at runtime</td>
+</tr>
+<tr>
+<td style="text-align: left;">Complex JSON parsing</td>
+<td style="text-align: left;">Guaranteed schema-validated outputs via Pydantic</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="core-power-ups">🔥 Core Power-Ups</h2>
+<div class="grid cards">
+<ul>
+<li>
+<h3 id="smart-crud">🧠 Smart CRUD</h3>
+<p>Create and update class instances using natural language. ExoModel understands intent and maps it to specific schema fields.</p>
+</li>
+<li>
+<h3 id="native-rag-grounding">📚 Native RAG Grounding</h3>
+<p>Attach PDFs, URLs, or Docs directly to your class. The object uses this "brain" to validate its own state against business rules.</p>
+</li>
+<li>
+<h3 id="exoagent-orchestration">🤖 ExoAgent Orchestration</h3>
+<p>A centralized brain that manages tool routing and persona switching to optimize LLM accuracy and cost.</p>
+</li>
+<li>
+<h3 id="api-first-design">🔌 API-First Design</h3>
+<p>Transform messy human input into the strict JSON schemas required by your existing legacy APIs and services.</p>
+</li>
+<li>
+<h3 id="agentic-tools-with-llm_function">⚙️ Agentic Tools with <code>@llm_function</code></h3>
+<p>Decorate any method on an <code>ExoModel</code> or <code>ExoModelList</code> class with <code>@llm_function</code> to expose it as an agentic tool. The agent discovers and calls it autonomously — no manual tool registration required.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="quick-start">🚀 Quick Start</h2>
+<h3 id="1-setup-your-environment">1. Setup your Environment</h3>
+<p>ExoModel is LLM-agnostic. Install only the provider package you need:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;exomodel[google]&quot;</span><span class="w">      </span><span class="c1"># Gemini (default)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;exomodel[anthropic]&quot;</span><span class="w">   </span><span class="c1"># Claude</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;exomodel[openai]&quot;</span><span class="w">      </span><span class="c1"># OpenAI / Azure OpenAI</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;exomodel[cohere]&quot;</span><span class="w">      </span><span class="c1"># Cohere</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;exomodel[all]&quot;</span><span class="w">         </span><span class="c1"># all providers</span>
+</code></pre></div>
+<p>Then set your model and API key in a <code>.env</code> file at the root of your project.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MY_LLM_MODEL=google_genai:gemini-2.5-flash-lite
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>MY_EMB_MODEL=google_genai:gemini-embedding-001   # optional — auto-detected from provider
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>GOOGLE_API_KEY=your-key-here
+</code></pre></div>
+<h3 id="2-create-a-knowledge-base">2. Create a Knowledge Base</h3>
+<p>Create a file named <code>proposal_rules.md</code>. This "grounds" your AI objects in real-world logic.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gh"># Proposal Rules</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">-</span><span class="w"> </span>We only accept projects above $10,000.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">-</span><span class="w"> </span>Every proposal must include a 10% safety margin in the pricing.
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">-</span><span class="w"> </span>We do not work with companies in the tobacco industry.
+</code></pre></div>
+<h3 id="3-define-and-run-your-entity">3. Define and Run your Entity</h3>
+<p>Inherit from <code>ExoModel</code> to give your data structures autonomous reasoning powers.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">exomodel</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExoModel</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="hll"><span class="k">class</span><span class="w"> </span><span class="nc">Proposal</span><span class="p">(</span><span class="n">ExoModel</span><span class="p">):</span>
+</span><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">client</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">budget</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="hll">    <span class="k">def</span><span class="w"> </span><span class="nf">get_rag_sources</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="c1"># The object now &#39;knows&#39; your specific business rules</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;proposal_rules.md&quot;</span><span class="p">]</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="hll">
+</span><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1"># Create and populate the object from raw text</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">p</span> <span class="o">=</span> <span class="n">Proposal</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Draft a 50k proposal for Tesla&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># print the object</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">to_ui</span><span class="p">())</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="c1"># The object analyzes itself based on the &#39;proposal_rules.md&#39;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">run_analysis</span><span class="p">())</span> 
+</code></pre></div>
+<hr />
+<h2 id="framework-architecture">🛠 Framework Architecture</h2>
+<p>ExoModel is built to be modular, scalable, and provider-agnostic.</p>
+<ul>
+<li><strong>ExoModel:</strong> The intelligent data foundation — schema-driven, AI-powered, RAG-aware.</li>
+<li><strong>ExoAgent:</strong> The reasoning orchestrator that routes tool calls and manages LLM context.</li>
+<li><strong>ExoModelList:</strong> Bulk management and agentic collection processing (CSV/UI exports).</li>
+<li><strong><code>@llm_function</code>:</strong> A decorator that turns any method into an agentic tool, discoverable and callable by <code>ExoAgent</code> at runtime.</li>
+</ul>
+<hr />
+<h2 id="use-cases">🎯 Use Cases</h2>
+<p>These are examples of how ExoModel maps to real-world problems across different domains.</p>
+<ul>
+<li>
+<h3 id="consultative-apps">🤝 Consultative Apps</h3>
+<p>Build AI advisors that guide users through complex processes (like insurance claims or financial planning) by populating structured models in real-time during the consultation.</p>
+</li>
+<li>
+<h3 id="seamless-api-integration">🔌 Seamless API Integration</h3>
+<p>Bridge the gap between human language and rigid backends. Use ExoModel as an <strong>Agentic Middleware</strong> to ensure every LLM output fits your API's exact specifications.</p>
+</li>
+<li>
+<h3 id="sales-crm-automation">📊 Sales &amp; CRM Automation</h3>
+<p>Deploy agents that draft professional proposals, calculate pricing based on business rules, and update lead status autonomously.</p>
+</li>
+<li>
+<h3 id="smart-auditing-compliance">🕵️♂️ Smart Auditing &amp; Compliance</h3>
+<p>Create objects that read their own source contracts to populate audit fields and flag inconsistencies without manual oversight.</p>
+</li>
+<li>
+<h3 id="intelligent-dashboarding">📈 Intelligent Dashboarding</h3>
+<p>Instantly transform raw logs or transcripts into lists of structured objects (<code>ExoModelList</code>), ready for data visualization.</p>
+</li>
+</ul>
+<hr />
+<h2 id="contributing">🤝 Contributing</h2>
+<p>We welcome contributions! ExoModel is built by developers for developers.</p>
+<ol>
+<li><strong>Fork</strong> the Project.</li>
+<li>Create your <strong>Feature Branch</strong> (<code>git checkout -b feature/AmazingFeature</code>).</li>
+<li><strong>Commit</strong> your Changes (<code>git commit -m 'Add some AmazingFeature'</code>).</li>
+<li><strong>Push</strong> to the Branch (<code>git push origin feature/AmazingFeature</code>).</li>
+<li>Open a <strong>Pull Request</strong>.</li>
+</ol>
+<hr />
+<h2 id="license">📄 License</h2>
+<p>Distributed under the Apache License 2.0. See <code>LICENSE</code> for more information.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
