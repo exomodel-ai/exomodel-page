@@ -145,5 +145,11 @@ We welcome contributions\! ExoModel is built by developers for developers.
 
 Distributed under the Apache License 2.0. See `LICENSE` for more information.
 
+-----
+
+## 📬 Contact
+
+Have questions or feedback? Reach out at [contact@exomodel.ai](mailto:contact@exomodel.ai).
+
 
 

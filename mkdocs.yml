@@ -44,6 +44,10 @@ extra:
   analytics:
     provider: google
     property: G-YH6DNQ1KSZ
+  social:
+    - icon: material/email
+      link: mailto:contact@exomodel.ai
+      name: Contact us
 
 markdown_extensions:
   - admonition
